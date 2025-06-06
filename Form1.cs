@@ -6,5 +6,7 @@ namespace Laboratorio_2.git_hub
         {
             InitializeComponent();
         }
+
+
     }
 }
