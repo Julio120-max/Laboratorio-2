@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             lblnombre = new Label();
-            textBox1 = new TextBox();
+            txtnombre = new TextBox();
             lblservicios = new Label();
             cbxseleccionar = new ComboBox();
             btnagregar = new Button();
@@ -38,6 +38,9 @@
             lblresultado = new Label();
             btntotal = new Button();
             btnlimpiar = new Button();
+            btnnombre = new Button();
+            lblmensaje = new Label();
+            btnsalir = new Button();
             SuspendLayout();
             // 
             // lblnombre
@@ -50,12 +53,12 @@
             lblnombre.TabIndex = 0;
             lblnombre.Text = "Nombre del cliente:";
             // 
-            // textBox1
+            // txtnombre
             // 
-            textBox1.Location = new Point(345, 34);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(321, 27);
-            textBox1.TabIndex = 1;
+            txtnombre.Location = new Point(345, 34);
+            txtnombre.Name = "txtnombre";
+            txtnombre.Size = new Size(230, 27);
+            txtnombre.TabIndex = 1;
             // 
             // lblservicios
             // 
@@ -70,31 +73,34 @@
             // cbxseleccionar
             // 
             cbxseleccionar.FormattingEnabled = true;
+            cbxseleccionar.Items.AddRange(new object[] { "Instalaciones electricas.", "Limpieza profunda.", "Pintura y retoques estéticos.", "Mantenimiento de jardines.", "Controles preventivos de plagas." });
             cbxseleccionar.Location = new Point(345, 88);
             cbxseleccionar.Name = "cbxseleccionar";
-            cbxseleccionar.Size = new Size(151, 28);
+            cbxseleccionar.Size = new Size(230, 28);
             cbxseleccionar.TabIndex = 3;
+            cbxseleccionar.Text = "                     Servicios";
             // 
             // btnagregar
             // 
-            btnagregar.Location = new Point(521, 89);
+            btnagregar.Location = new Point(581, 89);
             btnagregar.Name = "btnagregar";
-            btnagregar.Size = new Size(145, 29);
+            btnagregar.Size = new Size(132, 29);
             btnagregar.TabIndex = 4;
-            btnagregar.Text = "Agregar";
+            btnagregar.Text = "Agregar servicio";
             btnagregar.UseVisualStyleBackColor = true;
+            btnagregar.Click += btnagregar_Click;
             // 
             // ltx
             // 
             ltx.FormattingEnabled = true;
             ltx.Location = new Point(107, 145);
             ltx.Name = "ltx";
-            ltx.Size = new Size(240, 144);
+            ltx.Size = new Size(280, 144);
             ltx.TabIndex = 5;
             // 
             // btncalcular
             // 
-            btncalcular.Location = new Point(431, 203);
+            btncalcular.Location = new Point(460, 260);
             btncalcular.Name = "btncalcular";
             btncalcular.Size = new Size(168, 29);
             btncalcular.TabIndex = 6;
@@ -112,7 +118,7 @@
             // 
             // btntotal
             // 
-            btntotal.Location = new Point(431, 409);
+            btntotal.Location = new Point(384, 409);
             btntotal.Name = "btntotal";
             btntotal.Size = new Size(112, 29);
             btntotal.TabIndex = 8;
@@ -121,18 +127,49 @@
             // 
             // btnlimpiar
             // 
-            btnlimpiar.Location = new Point(572, 409);
+            btnlimpiar.Location = new Point(534, 409);
             btnlimpiar.Name = "btnlimpiar";
             btnlimpiar.Size = new Size(94, 29);
             btnlimpiar.TabIndex = 9;
             btnlimpiar.Text = "Limpiar";
             btnlimpiar.UseVisualStyleBackColor = true;
             // 
+            // btnnombre
+            // 
+            btnnombre.Location = new Point(581, 32);
+            btnnombre.Name = "btnnombre";
+            btnnombre.Size = new Size(132, 29);
+            btnnombre.TabIndex = 10;
+            btnnombre.Text = "Agregar nombre";
+            btnnombre.UseVisualStyleBackColor = true;
+            btnnombre.Click += btnnombre_Click;
+            // 
+            // lblmensaje
+            // 
+            lblmensaje.AutoSize = true;
+            lblmensaje.Location = new Point(393, 173);
+            lblmensaje.Name = "lblmensaje";
+            lblmensaje.Size = new Size(0, 20);
+            lblmensaje.TabIndex = 11;
+            // 
+            // btnsalir
+            // 
+            btnsalir.Location = new Point(668, 409);
+            btnsalir.Name = "btnsalir";
+            btnsalir.Size = new Size(94, 29);
+            btnsalir.TabIndex = 12;
+            btnsalir.Text = "Salir";
+            btnsalir.UseVisualStyleBackColor = true;
+            btnsalir.Click += btnsalir_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnsalir);
+            Controls.Add(lblmensaje);
+            Controls.Add(btnnombre);
             Controls.Add(btnlimpiar);
             Controls.Add(btntotal);
             Controls.Add(lblresultado);
@@ -141,7 +178,7 @@
             Controls.Add(btnagregar);
             Controls.Add(cbxseleccionar);
             Controls.Add(lblservicios);
-            Controls.Add(textBox1);
+            Controls.Add(txtnombre);
             Controls.Add(lblnombre);
             Name = "Form1";
             Text = "Form1";
@@ -152,7 +189,7 @@
         #endregion
 
         private Label lblnombre;
-        private TextBox textBox1;
+        private TextBox txtnombre;
         private Label lblservicios;
         private ComboBox cbxseleccionar;
         private Button btnagregar;
@@ -161,5 +198,8 @@
         private Label lblresultado;
         private Button btntotal;
         private Button btnlimpiar;
+        private Button btnnombre;
+        private Label lblmensaje;
+        private Button btnsalir;
     }
 }
