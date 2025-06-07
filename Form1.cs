@@ -123,6 +123,7 @@ namespace Laboratorio_2.git_hub
             txtnombre.Clear();
             ltxservicios.Items.Clear();
             lblresultado.Text = "";
+
         }
     }
 }
