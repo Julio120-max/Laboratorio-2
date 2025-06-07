@@ -8,8 +8,11 @@ namespace Laboratorio_2.git_hub
     public partial class Form1 : Form
     {
         string nombre = string.Empty;
+<<<<<<< HEAD
         int[] precios = { 5000, 10000, 8000, 4000, 6750 };
         List<int> valores = [];
+=======
+>>>>>>> 0c735cc311d78ab34d530ad2843047469e4ec8b8
 
         public Form1()
         {
@@ -23,7 +26,11 @@ namespace Laboratorio_2.git_hub
                 lblmensaje.Text = " Por favor, ingrese un nombre.";
                 lblmensaje.ForeColor = Color.Red;
             }
+<<<<<<< HEAD
             else if (ltxservicios.Items.Contains(nombre))
+=======
+            else if (ltx.Items.Contains(nombre))
+>>>>>>> 0c735cc311d78ab34d530ad2843047469e4ec8b8
             {
                 lblmensaje.Text = " Ya existe un nombre";
                 lblmensaje.ForeColor = Color.Black;
@@ -33,6 +40,7 @@ namespace Laboratorio_2.git_hub
                 lblmensaje.Text = " El nombre ha sido guardado correctamente.";
                 lblmensaje.ForeColor = Color.Black;
                 nombre = txtnombre.Text;
+<<<<<<< HEAD
                 ltxservicios.Items.Add(nombre);
             }
         }
@@ -46,16 +54,28 @@ namespace Laboratorio_2.git_hub
             {
                 lblmensaje.Text = "Por favor selecciones un servicio.";
                 lblmensaje.ForeColor = Color.Red;
+=======
+                ltx.Items.Add(nombre);
+>>>>>>> 0c735cc311d78ab34d530ad2843047469e4ec8b8
             }
         }
         public void agregarprecios()
         {
+<<<<<<< HEAD
             int lugar = cbxseleccionar.SelectedIndex;
             int valor = precios[lugar];
             valores.Add(precios[lugar]);
             lblmensaje.Text = " El servicio se agrego correctamente ";
             lblmensaje.ForeColor = Color.Black;
             ltxservicios.Items.Add($"{cbxseleccionar.SelectedItem} - ¢{valor}");
+=======
+            int[] precios = { 5000, 10000, 8000, 4000, 6750 };
+            int lugar = cbxseleccionar.SelectedIndex;
+            int valor = precios[lugar];
+            lblmensaje.Text = " El servicio se agrego correctamente ";
+            lblmensaje.ForeColor = Color.Black;
+            ltx.Items.Add($"{cbxseleccionar.SelectedItem} - ¢{valor}");
+>>>>>>> 0c735cc311d78ab34d530ad2843047469e4ec8b8
         }
 
         public void seleccioncbx()
@@ -66,14 +86,23 @@ namespace Laboratorio_2.git_hub
             }
             else if (cbxseleccionar.SelectedItem == null)
             {
+<<<<<<< HEAD
                 validarservicio();
+=======
+                lblmensaje.Text = "Por favor, seleccione un servicio.";
+                lblmensaje.ForeColor = Color.Red;
+>>>>>>> 0c735cc311d78ab34d530ad2843047469e4ec8b8
             }
             else
             {
                 agregarprecios();
             }
         }
+<<<<<<< HEAD
         public void salirdetodo()
+=======
+        public void salirdetodo ()
+>>>>>>> 0c735cc311d78ab34d530ad2843047469e4ec8b8
         {
             this.Close();
         }
@@ -93,6 +122,7 @@ namespace Laboratorio_2.git_hub
         {
             salirdetodo();
         }
+<<<<<<< HEAD
         private void btncalculo_Click(object sender, EventArgs e)
         {
             CalcularTotal();
@@ -125,6 +155,7 @@ namespace Laboratorio_2.git_hub
             lblresultado.Text = "";
 
         }
+
     }
 }
 
