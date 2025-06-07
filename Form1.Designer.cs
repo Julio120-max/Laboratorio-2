@@ -41,7 +41,6 @@
             lblmensaje = new Label();
             btnsalir = new Button();
             btncalculo = new Button();
-
             SuspendLayout();
             // 
             // lblnombre
@@ -56,15 +55,10 @@
             // 
             // txtnombre
             // 
-
-            txtnombre.Location = new Point(302, 26);
+            txtnombre.Location = new Point(345, 34);
             txtnombre.Margin = new Padding(3, 2, 3, 2);
             txtnombre.Name = "txtnombre";
-            txtnombre.Size = new Size(202, 23);
-            txtnombre.Location = new Point(345, 34);
-            txtnombre.Name = "txtnombre";
-            txtnombre.Size = new Size(230, 27);
-
+            txtnombre.Size = new Size(230, 23);
             txtnombre.TabIndex = 1;
             // 
             // lblservicios
@@ -81,24 +75,17 @@
             // 
             cbxseleccionar.FormattingEnabled = true;
             cbxseleccionar.Items.AddRange(new object[] { "Instalaciones electricas.", "Limpieza profunda.", "Pintura y retoques estéticos.", "Mantenimiento de jardines.", "Controles preventivos de plagas." });
-            cbxseleccionar.Location = new Point(302, 66);
+            cbxseleccionar.Location = new Point(345, 88);
             cbxseleccionar.Margin = new Padding(3, 2, 3, 2);
             cbxseleccionar.Name = "cbxseleccionar";
-            cbxseleccionar.Size = new Size(202, 23);
-            cbxseleccionar.Location = new Point(345, 88);
-            cbxseleccionar.Name = "cbxseleccionar";
-            cbxseleccionar.Size = new Size(230, 28);
+            cbxseleccionar.Size = new Size(230, 23);
             cbxseleccionar.TabIndex = 3;
             cbxseleccionar.Text = "                     Servicios";
             // 
             // btnagregar
             // 
-
-            btnagregar.Location = new Point(508, 67);
-            btnagregar.Margin = new Padding(3, 2, 3, 2);
-            btnagregar.Name = "btnagregar";
-            btnagregar.Size = new Size(116, 22);
             btnagregar.Location = new Point(581, 89);
+            btnagregar.Margin = new Padding(3, 2, 3, 2);
             btnagregar.Name = "btnagregar";
             btnagregar.Size = new Size(132, 29);
             btnagregar.TabIndex = 4;
@@ -110,25 +97,11 @@
             // 
             ltxservicios.FormattingEnabled = true;
             ltxservicios.ItemHeight = 15;
-            ltxservicios.Location = new Point(94, 109);
+            ltxservicios.Location = new Point(107, 145);
             ltxservicios.Margin = new Padding(3, 2, 3, 2);
             ltxservicios.Name = "ltxservicios";
-            ltxservicios.Size = new Size(246, 109);
+            ltxservicios.Size = new Size(280, 139);
             ltxservicios.TabIndex = 5;
-            ltxservicios.FormattingEnabled = true;
-            ltxservicios.Location = new Point(107, 145);
-            ltxservicios.Name = "ltx";
-            ltxservicios.Size = new Size(280, 144);
-            ltxservicios.TabIndex = 5;
-            // 
-            // btncalcular
-            // 
-            btncalcular.Location = new Point(460, 260);
-            btncalcular.Name = "btncalcular";
-            btncalcular.Size = new Size(168, 29);
-            btncalcular.TabIndex = 6;
-            btncalcular.Text = "Calcular total";
-            btncalcular.UseVisualStyleBackColor = true;
             // 
             // lblresultado
             // 
@@ -141,9 +114,8 @@
             // 
             // btntotal
             // 
-            btntotal.Location = new Point(336, 307);
-            btntotal.Margin = new Padding(3, 2, 3, 2);
             btntotal.Location = new Point(384, 409);
+            btntotal.Margin = new Padding(3, 2, 3, 2);
             btntotal.Name = "btntotal";
             btntotal.Size = new Size(98, 22);
             btntotal.TabIndex = 8;
@@ -152,9 +124,8 @@
             // 
             // btnlimpiar
             // 
-            btnlimpiar.Location = new Point(467, 307);
-            btnlimpiar.Margin = new Padding(3, 2, 3, 2);
             btnlimpiar.Location = new Point(534, 409);
+            btnlimpiar.Margin = new Padding(3, 2, 3, 2);
             btnlimpiar.Name = "btnlimpiar";
             btnlimpiar.Size = new Size(82, 22);
             btnlimpiar.TabIndex = 9;
@@ -164,10 +135,10 @@
             // 
             // btnnombre
             // 
-            btnnombre.Location = new Point(508, 24);
+            btnnombre.Location = new Point(581, 32);
             btnnombre.Margin = new Padding(3, 2, 3, 2);
             btnnombre.Name = "btnnombre";
-            btnnombre.Size = new Size(116, 22);
+            btnnombre.Size = new Size(132, 29);
             btnnombre.TabIndex = 10;
             btnnombre.Text = "Agregar nombre";
             btnnombre.UseVisualStyleBackColor = true;
@@ -176,17 +147,17 @@
             // lblmensaje
             // 
             lblmensaje.AutoSize = true;
-            lblmensaje.Location = new Point(344, 130);
+            lblmensaje.Location = new Point(393, 173);
             lblmensaje.Name = "lblmensaje";
             lblmensaje.Size = new Size(0, 15);
             lblmensaje.TabIndex = 11;
             // 
             // btnsalir
             // 
-            btnsalir.Location = new Point(584, 307);
+            btnsalir.Location = new Point(668, 409);
             btnsalir.Margin = new Padding(3, 2, 3, 2);
             btnsalir.Name = "btnsalir";
-            btnsalir.Size = new Size(82, 22);
+            btnsalir.Size = new Size(94, 29);
             btnsalir.TabIndex = 12;
             btnsalir.Text = "Salir";
             btnsalir.UseVisualStyleBackColor = true;
@@ -202,41 +173,12 @@
             btncalculo.UseVisualStyleBackColor = true;
             btncalculo.Click += btncalculo_Click;
             // 
-            // btnnombre
-            // 
-            btnnombre.Location = new Point(581, 32);
-            btnnombre.Name = "btnnombre";
-            btnnombre.Size = new Size(132, 29);
-            btnnombre.TabIndex = 10;
-            btnnombre.Text = "Agregar nombre";
-            btnnombre.UseVisualStyleBackColor = true;
-            btnnombre.Click += btnnombre_Click;
-            // 
-            // lblmensaje
-            // 
-            lblmensaje.AutoSize = true;
-            lblmensaje.Location = new Point(393, 173);
-            lblmensaje.Name = "lblmensaje";
-            lblmensaje.Size = new Size(0, 20);
-            lblmensaje.TabIndex = 11;
-            // 
-            // btnsalir
-            // 
-            btnsalir.Location = new Point(668, 409);
-            btnsalir.Name = "btnsalir";
-            btnsalir.Size = new Size(94, 29);
-            btnsalir.TabIndex = 12;
-            btnsalir.Text = "Salir";
-            btnsalir.UseVisualStyleBackColor = true;
-            btnsalir.Click += btnsalir_Click;
-            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(700, 338);
-            Controls.Add(btncalculo);
             ClientSize = new Size(800, 450);
+            Controls.Add(btncalculo);
             Controls.Add(btnsalir);
             Controls.Add(lblmensaje);
             Controls.Add(btnnombre);
@@ -252,6 +194,7 @@
             Margin = new Padding(3, 2, 3, 2);
             Name = "Form1";
             Text = "Form1";
+            Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
         }

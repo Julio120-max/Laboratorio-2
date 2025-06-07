@@ -135,18 +135,18 @@ namespace Laboratorio_2.git_hub
             int suma = 0;
             foreach (var valores in valores)
             {
-                suma  += valores;
+                suma += valores;
                 lblresultado.Text = $"{suma}";
 
-            if (suma > 35000)
-            
-              lblresultado.Text = "Total con descuento: " + suma;
-            
-            else
-                suma -= 3000;
+                if (suma > 35000)
+
+                    lblresultado.Text = "Total con descuento: " + suma;
+
+                else
+                    suma -= 3000;
                 lblresultado.Text = "Total con descuento: " + suma;
             }
-         }
+        }
 
         public void btnlimpiar_Click(object sender, EventArgs e)
         {
@@ -155,7 +155,6 @@ namespace Laboratorio_2.git_hub
             lblresultado.Text = "";
 
         }
-
     }
 }
 
