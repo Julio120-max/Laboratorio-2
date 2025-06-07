@@ -40,6 +40,9 @@
             btnnombre = new Button();
             lblmensaje = new Label();
             btnsalir = new Button();
+            btnnombre = new Button();
+            lblmensaje = new Label();
+            btnsalir = new Button();
             btncalculo = new Button();
             SuspendLayout();
             // 
@@ -55,6 +58,10 @@
             // 
             // txtnombre
             // 
+            txtnombre.Location = new Point(345, 34);
+            txtnombre.Name = "txtnombre";
+            txtnombre.Size = new Size(230, 27);
+            txtnombre.TabIndex = 1;
             txtnombre.Location = new Point(345, 34);
             txtnombre.Margin = new Padding(3, 2, 3, 2);
             txtnombre.Name = "txtnombre";
@@ -78,12 +85,14 @@
             cbxseleccionar.Location = new Point(345, 88);
             cbxseleccionar.Margin = new Padding(3, 2, 3, 2);
             cbxseleccionar.Name = "cbxseleccionar";
+            cbxseleccionar.Size = new Size(230, 28);
             cbxseleccionar.Size = new Size(230, 23);
             cbxseleccionar.TabIndex = 3;
             cbxseleccionar.Text = "                     Servicios";
             // 
             // btnagregar
             // 
+            btnagregar.Location = new Point(581, 89);
             btnagregar.Location = new Point(581, 89);
             btnagregar.Margin = new Padding(3, 2, 3, 2);
             btnagregar.Name = "btnagregar";
@@ -95,6 +104,11 @@
             // 
             // ltxservicios
             // 
+            ltx.FormattingEnabled = true;
+            ltx.Location = new Point(107, 145);
+            ltx.Name = "ltx";
+            ltx.Size = new Size(280, 144);
+            ltx.TabIndex = 5;
             ltxservicios.FormattingEnabled = true;
             ltxservicios.ItemHeight = 15;
             ltxservicios.Location = new Point(107, 145);
@@ -115,6 +129,7 @@
             // btntotal
             // 
             btntotal.Location = new Point(384, 409);
+            btntotal.Location = new Point(384, 409);
             btntotal.Margin = new Padding(3, 2, 3, 2);
             btntotal.Name = "btntotal";
             btntotal.Size = new Size(98, 22);
@@ -124,6 +139,7 @@
             // 
             // btnlimpiar
             // 
+            btnlimpiar.Location = new Point(534, 409);
             btnlimpiar.Location = new Point(534, 409);
             btnlimpiar.Margin = new Padding(3, 2, 3, 2);
             btnlimpiar.Name = "btnlimpiar";
@@ -173,11 +189,42 @@
             btncalculo.UseVisualStyleBackColor = true;
             btncalculo.Click += btncalculo_Click;
             // 
+            // btnnombre
+            // 
+            btnnombre.Location = new Point(581, 32);
+            btnnombre.Name = "btnnombre";
+            btnnombre.Size = new Size(132, 29);
+            btnnombre.TabIndex = 10;
+            btnnombre.Text = "Agregar nombre";
+            btnnombre.UseVisualStyleBackColor = true;
+            btnnombre.Click += btnnombre_Click;
+            // 
+            // lblmensaje
+            // 
+            lblmensaje.AutoSize = true;
+            lblmensaje.Location = new Point(393, 173);
+            lblmensaje.Name = "lblmensaje";
+            lblmensaje.Size = new Size(0, 20);
+            lblmensaje.TabIndex = 11;
+            // 
+            // btnsalir
+            // 
+            btnsalir.Location = new Point(668, 409);
+            btnsalir.Name = "btnsalir";
+            btnsalir.Size = new Size(94, 29);
+            btnsalir.TabIndex = 12;
+            btnsalir.Text = "Salir";
+            btnsalir.UseVisualStyleBackColor = true;
+            btnsalir.Click += btnsalir_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnsalir);
+            Controls.Add(lblmensaje);
+            Controls.Add(btnnombre);
             Controls.Add(btncalculo);
             Controls.Add(btnsalir);
             Controls.Add(lblmensaje);
@@ -211,6 +258,9 @@
         private Label lblresultado;
         private Button btntotal;
         private Button btnlimpiar;
+        private Button btnnombre;
+        private Label lblmensaje;
+        private Button btnsalir;
         private Button btnnombre;
         private Label lblmensaje;
         private Button btnsalir;
