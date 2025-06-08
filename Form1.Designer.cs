@@ -193,7 +193,6 @@
             Margin = new Padding(3, 2, 3, 2);
             Name = "Form1";
             Text = "Form1";
-            Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -206,7 +205,6 @@
         private ComboBox cbxseleccionar;
         private Button btnagregar;
         private ListBox ltxservicios;
-        private Button btncalcular;
         private Label lblresultado;
         private Button btntotal;
         private Button btnlimpiar;

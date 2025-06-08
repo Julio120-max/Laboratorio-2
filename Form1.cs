@@ -120,7 +120,7 @@ namespace Laboratorio_2.git_hub
         }
         private void btnagregar_Click(object sender, EventArgs e)
         {
-         seleccioncbx();
+            seleccioncbx();
 
         }
     }
