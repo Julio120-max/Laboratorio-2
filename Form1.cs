@@ -9,11 +9,9 @@ namespace Laboratorio_2.git_hub
     {
         string nombre = string.Empty;
         int[] precios = { 5000, 10000, 8000, 4000, 6750 };
-        List<int> valores = [];
+        List<int> valores = new List<int>();
         int suma = 0;
         int residuo = 3000;
-        List<int> valores = new List<int>();
-
         public Form1()
         {
             InitializeComponent();
@@ -33,10 +31,6 @@ namespace Laboratorio_2.git_hub
                 lblmuestra.ForeColor = Color.Black;
             }
         }
-        
-        
-    
-            
         // def validar nombre.
         public void validarnombre()
         {
@@ -58,25 +52,26 @@ namespace Laboratorio_2.git_hub
         {
             if (string.IsNullOrWhiteSpace(txtnombre.Text) || ltxservicios.Items.Contains(nombre))
             {
-                nombrevacio();
-            } 
-            if (cbxseleccionar.SelectedItem == null)
                 validarservicio();
             }
             else if (cbxseleccionar.SelectedItem == null)
-            {
-                lblmensaje.Text = (" Por favor selecciones un servicio.");
-                lblmensaje.ForeColor = Color.Red;
-                return;
-            }
-            else
-            {
+                nombrevacio();
+         if private void btnlimpiar_Click(object sender, EventArgs e)
+       {
+        lblmensaje.Text = (" Por favor selecciones un servicio.");
+        lblmensaje.ForeColor = Color.Red;
+        return;
+        }
+    else
                 lblmensaje.Text = " El servicio ha sido agregado correctamente";
                 ltxservicios.Items.Add(cbxseleccionar.SelectedItem);
-            }
+               }
+      }
+}
+            
             
 
-        }
+}
         // def agregar precios.
         public void agregarprecios()
         {
@@ -92,8 +87,8 @@ namespace Laboratorio_2.git_hub
         {
             if (string.IsNullOrWhiteSpace(txtnombre.Text) || ltxservicios.Items.Contains(nombre))
             {
+                validarnombre()
                 nombrevacio();
-                validarnombre();
             }
             else if (cbxseleccionar.SelectedItem == null)
             {
@@ -102,19 +97,52 @@ namespace Laboratorio_2.git_hub
             else
             {
                 agregarprecios();
-            }
-            
-            else
-            {
-                agregarprecios();
-            }
+
         }
         // def salir de todo.
         public void salirdetodo()
         {
             this.Close();
         }
+        private void btnsalir_Click(object sender, EventArgs e)
+        {
+            salirdetodo();
+        }
 
+        private void btncalculo_Click(object sender, EventArgs e)
+        {
+            CalcularTotal();
+        }
+
+        public void CalcularTotal()
+        {
+            validarservicio();
+
+            int suma = 0;
+            foreach (var valores in valores)
+            {
+                suma += valores;
+                lblresultado.Text = $"{suma}";
+                int cantidadServicios = ltxservicios.Items.Count;
+                if (cantidadServicios > 3)
+                {
+                    suma -= 3000;
+                    lblresultado.Text = $"Total con descuento: {suma}";
+                }
+                else
+                {
+                    lblresultado.Text = $"Total sin descuento: {suma}";
+                }
+            }
+        }
+
+
+        public void btnlimpiar_Click(object sender, EventArgs e)
+        {
+            txtnombre.Clear();
+            ltxservicios.Items.Clear();
+            lblresultado.Text = "";
+            valores.Clear();
         // def limpiar.
         public void limpiar()
         {
@@ -122,7 +150,6 @@ namespace Laboratorio_2.git_hub
             ltxservicios.Items.Clear();
             lblresultado.Text = " Resultado: ";
         }
-
 
 
         public void CalcularTotal()
@@ -158,44 +185,13 @@ namespace Laboratorio_2.git_hub
                 {
                     lblmensaje.Text = "Total elevado revise su seleccion: ";
                 }
-        private void btncalculo_Click(object sender, EventArgs e)
-        {
-            CalcularTotal();
-        }
-
-        public void CalcularTotal()
-        {
-            validarservicio();
-
-            int suma = 0;
-            foreach (var valores in valores)
-            {
-                suma += valores;
-                lblresultado.Text = $"{suma}";
-                int cantidadServicios = ltxservicios.Items.Count;
-                if (cantidadServicios > 3)
-                {
-                    suma -= 3000;
-                    lblresultado.Text = $"Total con descuento: {suma}";
-                }
-                else
-                {
-                    lblresultado.Text = $"Total sin descuento: {suma}";
-                }
             }
         }
 
         //Botones
         private void btnnombre_Click(object sender, EventArgs e)
-
-        public void btnlimpiar_Click(object sender, EventArgs e)
         {
             validarnombre();
-            txtnombre.Clear();
-            ltxservicios.Items.Clear();
-            lblresultado.Text = "";
-            valores.Clear();
-
         }
         private void btnagregar_Click(object sender, EventArgs e)
         {
@@ -212,7 +208,4 @@ namespace Laboratorio_2.git_hub
         private void btnsalir_Click(object sender, EventArgs e)
         {
             salirdetodo();
-        }
-
-    }
 }
