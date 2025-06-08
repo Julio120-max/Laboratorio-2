@@ -10,7 +10,7 @@ namespace Laboratorio_2.git_hub
     {
         string nombre = string.Empty;
         int[] precios = { 5000, 10000, 8000, 4000, 6750 };
-        List<int> valores = [];
+        List<int> valores = new List<int>();
 
         public Form1()
         {
@@ -41,7 +41,7 @@ namespace Laboratorio_2.git_hub
         {
             if (string.IsNullOrWhiteSpace(txtnombre.Text))
             {
-             validarservicio();
+                validarservicio();
             }
             else if (cbxseleccionar.SelectedItem == null)
             {
@@ -64,16 +64,16 @@ namespace Laboratorio_2.git_hub
         {
             if (string.IsNullOrWhiteSpace(txtnombre.Text))
             {
-             validarnombre();
+                validarnombre();
             }
             else if (cbxseleccionar.SelectedItem == null)
             {
                 validarservicio();
             }
-           else
-           {
-             agregarprecios();
-           }
+            else
+            {
+                agregarprecios();
+            }
         }
         public void salirdetodo()
         {
@@ -93,29 +93,33 @@ namespace Laboratorio_2.git_hub
 
         public void CalcularTotal()
         {
-         validarservicio();
+            validarservicio();
 
             int suma = 0;
             foreach (var valores in valores)
             {
                 suma += valores;
                 lblresultado.Text = $"{suma}";
-
-                if (suma > 35000)
-
-                    lblresultado.Text = "Total elevado revise su seleccion: ";
-
-                else
+                int cantidadServicios = ltxservicios.Items.Count;
+                if (cantidadServicios > 3)
+                {
                     suma -= 3000;
-                lblresultado.Text = "Total con descuento: " + suma;
+                    lblresultado.Text = $"Total con descuento: {suma}";
+                }
+                else
+                {
+                    lblresultado.Text = $"Total sin descuento: {suma}";
+                }
             }
         }
+
 
         public void btnlimpiar_Click(object sender, EventArgs e)
         {
             txtnombre.Clear();
             ltxservicios.Items.Clear();
             lblresultado.Text = "";
+            valores.Clear();
 
         }
         private void btnagregar_Click(object sender, EventArgs e)
@@ -123,5 +127,6 @@ namespace Laboratorio_2.git_hub
             seleccioncbx();
 
         }
+
     }
 }

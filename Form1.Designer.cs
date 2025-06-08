@@ -108,7 +108,7 @@
             lblresultado.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             lblresultado.Location = new Point(94, 244);
             lblresultado.Name = "lblresultado";
-            lblresultado.Size = new Size(489, 45);
+            lblresultado.Size = new Size(471, 61);
             lblresultado.TabIndex = 7;
             lblresultado.Text = "\r\nResultado:";
             // 
@@ -176,7 +176,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(782, 466);
             Controls.Add(btncalculo);
             Controls.Add(btnsalir);
             Controls.Add(lblmensaje);
