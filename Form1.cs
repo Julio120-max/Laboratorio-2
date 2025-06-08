@@ -150,7 +150,7 @@ namespace Laboratorio_2.git_hub
 
                     if (suma > 35000)
                     {
-                        lblmensaje.Text = " Total elevado, revise su selección. ";
+                        lblmensaje.Text = " Total elevado, revise su selección . ";
                     }
                 }
             }
