@@ -43,6 +43,7 @@
             btncalculo = new Button();
             lblmuestra = new Label();
             lblresultado1 = new Label();
+            lblresultado2 = new Label();
             SuspendLayout();
             // 
             // lblnombre
@@ -103,11 +104,11 @@
             // lblresultado
             // 
             lblresultado.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            lblresultado.Location = new Point(107, 462);
+            lblresultado.Location = new Point(107, 497);
             lblresultado.Name = "lblresultado";
-            lblresultado.Size = new Size(708, 52);
+            lblresultado.Size = new Size(708, 26);
             lblresultado.TabIndex = 7;
-            lblresultado.Text = "\r\nResultado:";
+            lblresultado.Text = "Total con descuento:";
             // 
             // btntotal
             // 
@@ -141,7 +142,7 @@
             // lblmensaje
             // 
             lblmensaje.AutoSize = true;
-            lblmensaje.Location = new Point(457, 224);
+            lblmensaje.Location = new Point(447, 222);
             lblmensaje.Name = "lblmensaje";
             lblmensaje.Size = new Size(0, 20);
             lblmensaje.TabIndex = 11;
@@ -170,7 +171,7 @@
             // lblmuestra
             // 
             lblmuestra.AutoSize = true;
-            lblmuestra.Location = new Point(457, 279);
+            lblmuestra.Location = new Point(447, 264);
             lblmuestra.Name = "lblmuestra";
             lblmuestra.Size = new Size(0, 20);
             lblmuestra.TabIndex = 14;
@@ -180,15 +181,25 @@
             lblresultado1.AutoSize = true;
             lblresultado1.Location = new Point(107, 416);
             lblresultado1.Name = "lblresultado1";
-            lblresultado1.Size = new Size(75, 20);
+            lblresultado1.Size = new Size(117, 20);
             lblresultado1.TabIndex = 15;
-            lblresultado1.Text = "Resultado";
+            lblresultado1.Text = "Total descuento:";
+            // 
+            // lblresultado2
+            // 
+            lblresultado2.AutoSize = true;
+            lblresultado2.Location = new Point(107, 456);
+            lblresultado2.Name = "lblresultado2";
+            lblresultado2.Size = new Size(45, 20);
+            lblresultado2.TabIndex = 17;
+            lblresultado2.Text = "Total:";
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(914, 600);
+            Controls.Add(lblresultado2);
             Controls.Add(lblresultado1);
             Controls.Add(lblmuestra);
             Controls.Add(btncalculo);
@@ -227,5 +238,6 @@
         private Button btncalculo;
         private Label lblmuestra;
         private Label lblresultado1;
+        private Label lblresultado2;
     }
 }
