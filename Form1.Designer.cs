@@ -41,33 +41,34 @@
             lblmensaje = new Label();
             btnsalir = new Button();
             btncalculo = new Button();
+            lblmuestra = new Label();
+            lblresultado1 = new Label();
             SuspendLayout();
             // 
             // lblnombre
             // 
             lblnombre.AutoSize = true;
             lblnombre.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblnombre.Location = new Point(94, 28);
+            lblnombre.Location = new Point(107, 59);
             lblnombre.Name = "lblnombre";
-            lblnombre.Size = new Size(127, 19);
+            lblnombre.Size = new Size(160, 23);
             lblnombre.TabIndex = 0;
             lblnombre.Text = "Nombre del cliente:";
             // 
             // txtnombre
             // 
-            txtnombre.Location = new Point(345, 34);
-            txtnombre.Margin = new Padding(3, 2, 3, 2);
+            txtnombre.Location = new Point(354, 55);
             txtnombre.Name = "txtnombre";
-            txtnombre.Size = new Size(230, 23);
+            txtnombre.Size = new Size(293, 27);
             txtnombre.TabIndex = 1;
             // 
             // lblservicios
             // 
             lblservicios.AutoSize = true;
             lblservicios.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblservicios.Location = new Point(94, 67);
+            lblservicios.Location = new Point(107, 122);
             lblservicios.Name = "lblservicios";
-            lblservicios.Size = new Size(143, 19);
+            lblservicios.Size = new Size(180, 23);
             lblservicios.TabIndex = 2;
             lblservicios.Text = "Seleccioné un servicio:";
             // 
@@ -75,19 +76,17 @@
             // 
             cbxseleccionar.FormattingEnabled = true;
             cbxseleccionar.Items.AddRange(new object[] { "Instalaciones electricas.", "Limpieza profunda.", "Pintura y retoques estéticos.", "Mantenimiento de jardines.", "Controles preventivos de plagas." });
-            cbxseleccionar.Location = new Point(345, 88);
-            cbxseleccionar.Margin = new Padding(3, 2, 3, 2);
+            cbxseleccionar.Location = new Point(354, 117);
             cbxseleccionar.Name = "cbxseleccionar";
-            cbxseleccionar.Size = new Size(230, 23);
+            cbxseleccionar.Size = new Size(293, 28);
             cbxseleccionar.TabIndex = 3;
-            cbxseleccionar.Text = "                     Servicios";
+            cbxseleccionar.Text = "                          Servicios";
             // 
             // btnagregar
             // 
-            btnagregar.Location = new Point(581, 89);
-            btnagregar.Margin = new Padding(3, 2, 3, 2);
+            btnagregar.Location = new Point(664, 117);
             btnagregar.Name = "btnagregar";
-            btnagregar.Size = new Size(132, 29);
+            btnagregar.Size = new Size(151, 28);
             btnagregar.TabIndex = 4;
             btnagregar.Text = "Agregar servicio";
             btnagregar.UseVisualStyleBackColor = true;
@@ -96,17 +95,15 @@
             // ltxservicios
             // 
             ltxservicios.FormattingEnabled = true;
-            ltxservicios.ItemHeight = 15;
-            ltxservicios.Location = new Point(107, 145);
-            ltxservicios.Margin = new Padding(3, 2, 3, 2);
+            ltxservicios.Location = new Point(107, 195);
             ltxservicios.Name = "ltxservicios";
-            ltxservicios.Size = new Size(280, 139);
+            ltxservicios.Size = new Size(321, 184);
             ltxservicios.TabIndex = 5;
             // 
             // lblresultado
             // 
             lblresultado.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            lblresultado.Location = new Point(94, 244);
+            lblresultado.Location = new Point(107, 462);
             lblresultado.Name = "lblresultado";
             lblresultado.Size = new Size(471, 61);
             lblresultado.TabIndex = 7;
@@ -114,20 +111,18 @@
             // 
             // btntotal
             // 
-            btntotal.Location = new Point(384, 409);
-            btntotal.Margin = new Padding(3, 2, 3, 2);
+            btntotal.Location = new Point(390, 545);
             btntotal.Name = "btntotal";
-            btntotal.Size = new Size(98, 22);
+            btntotal.Size = new Size(112, 29);
             btntotal.TabIndex = 8;
             btntotal.Text = "Calcular total";
             btntotal.UseVisualStyleBackColor = true;
             // 
             // btnlimpiar
             // 
-            btnlimpiar.Location = new Point(534, 409);
-            btnlimpiar.Margin = new Padding(3, 2, 3, 2);
+            btnlimpiar.Location = new Point(553, 545);
             btnlimpiar.Name = "btnlimpiar";
-            btnlimpiar.Size = new Size(82, 22);
+            btnlimpiar.Size = new Size(94, 29);
             btnlimpiar.TabIndex = 9;
             btnlimpiar.Text = "Limpiar";
             btnlimpiar.UseVisualStyleBackColor = true;
@@ -135,28 +130,27 @@
             // 
             // btnnombre
             // 
-            btnnombre.Location = new Point(581, 32);
-            btnnombre.Margin = new Padding(3, 2, 3, 2);
+            btnnombre.Location = new Point(664, 55);
             btnnombre.Name = "btnnombre";
-            btnnombre.Size = new Size(132, 29);
+            btnnombre.Size = new Size(151, 27);
             btnnombre.TabIndex = 10;
             btnnombre.Text = "Agregar nombre";
             btnnombre.UseVisualStyleBackColor = true;
+            btnnombre.Click += btnnombre_Click;
             // 
             // lblmensaje
             // 
             lblmensaje.AutoSize = true;
-            lblmensaje.Location = new Point(393, 173);
+            lblmensaje.Location = new Point(457, 224);
             lblmensaje.Name = "lblmensaje";
-            lblmensaje.Size = new Size(0, 15);
+            lblmensaje.Size = new Size(0, 20);
             lblmensaje.TabIndex = 11;
             // 
             // btnsalir
             // 
-            btnsalir.Location = new Point(668, 409);
-            btnsalir.Margin = new Padding(3, 2, 3, 2);
+            btnsalir.Location = new Point(708, 545);
             btnsalir.Name = "btnsalir";
-            btnsalir.Size = new Size(94, 29);
+            btnsalir.Size = new Size(107, 29);
             btnsalir.TabIndex = 12;
             btnsalir.Text = "Salir";
             btnsalir.UseVisualStyleBackColor = true;
@@ -164,17 +158,35 @@
             // 
             // btncalculo
             // 
-            btncalculo.Location = new Point(398, 153);
+            btncalculo.Location = new Point(507, 348);
+            btncalculo.Margin = new Padding(3, 4, 3, 4);
             btncalculo.Name = "btncalculo";
-            btncalculo.Size = new Size(97, 23);
+            btncalculo.Size = new Size(197, 31);
             btncalculo.TabIndex = 13;
             btncalculo.Text = "Calcular total";
             btncalculo.UseVisualStyleBackColor = true;
             btncalculo.Click += btncalculo_Click;
             // 
+            // lblmuestra
+            // 
+            lblmuestra.AutoSize = true;
+            lblmuestra.Location = new Point(457, 279);
+            lblmuestra.Name = "lblmuestra";
+            lblmuestra.Size = new Size(0, 20);
+            lblmuestra.TabIndex = 14;
+            // 
+            // lblresultado1
+            // 
+            lblresultado1.AutoSize = true;
+            lblresultado1.Location = new Point(107, 416);
+            lblresultado1.Name = "lblresultado1";
+            lblresultado1.Size = new Size(75, 20);
+            lblresultado1.TabIndex = 15;
+            lblresultado1.Text = "Resultado";
+            // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(782, 466);
             Controls.Add(btncalculo);
@@ -190,9 +202,8 @@
             Controls.Add(lblservicios);
             Controls.Add(txtnombre);
             Controls.Add(lblnombre);
-            Margin = new Padding(3, 2, 3, 2);
             Name = "Form1";
-            Text = "Form1";
+            Text = "Simulador de cotización de Servicios";
             ResumeLayout(false);
             PerformLayout();
         }
@@ -212,5 +223,7 @@
         private Label lblmensaje;
         private Button btnsalir;
         private Button btncalculo;
+        private Label lblmuestra;
+        private Label lblresultado1;
     }
 }
