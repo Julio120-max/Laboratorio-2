@@ -11,12 +11,10 @@ namespace Laboratorio_2.git_hub
         int[] precios = { 5000, 10000, 8000, 4000, 6750 };
         List<int> valores = new List<int>();
         int suma = 0;
-
-
-        int residuo = 3000;
         public Form1()
         {
             InitializeComponent();
+            ltxservicios.ContextMenuStrip = contextMenuStrip1;
         }
 
         // def validar nombre vacio.
@@ -27,10 +25,7 @@ namespace Laboratorio_2.git_hub
                 lblmensaje.Text = " Por favor, ingrese un nombre ";
                 lblmensaje.ForeColor = Color.Red;
             }
-            else if (ltxservicios.Items.Contains(nombre))
-            {
-                
-            }
+            else if (ltxservicios.Items.Contains(nombre)) ;
         }
         // def validar nombre.
         public void validarnombre()
@@ -53,41 +48,21 @@ namespace Laboratorio_2.git_hub
         {
             if (string.IsNullOrWhiteSpace(txtnombre.Text) || ltxservicios.Items.Contains(nombre))
             {
-                validarservicio();
-            }
-            else if (cbxseleccionar.SelectedItem == null)
                 nombrevacio();
-            } 
-            if (cbxseleccionar.SelectedItem == null)
+            }
+            if (cbxseleccionar.SelectedItem != null)
+            {
+                lblmensaje.Text = " El servicio se ha agregado correctamente.";
+                ltxservicios.Items.Add(cbxseleccionar.SelectedItem);
+            }
+            else
             {
                 lblmensaje.Text = (" Por favor, seleccione un servicio.");
                 lblmensaje.ForeColor = Color.Red;
                 return;
             }
-            else
-            {
-                lblmensaje.Text = " El servicio se ha agregado correctamente.";
-         if private void btnlimpiar_Click(object sender, EventArgs e)
-       {
-        lblmensaje.Text = (" Por favor selecciones un servicio.");
-        lblmensaje.ForeColor = Color.Red;
-        return;
         }
-    else
-                lblmensaje.Text = " El servicio ha sido agregado correctamente";
-                ltxservicios.Items.Add(cbxseleccionar.SelectedItem);
-      
-            }
-               }
-      }
-}
-            
-            
 
-        }
-            
-
-}
         // def agregar precios.
         public void agregarprecios()
         {
@@ -103,14 +78,13 @@ namespace Laboratorio_2.git_hub
             ltxservicios.Items.Add($"{cbxseleccionar.SelectedItem} - ¢{valor}");
             lblmensaje.Text = " El servicio se ha agregado correctamente.";
             lblmensaje.ForeColor = Color.Black;
-            
+
         }
         // def selección de combobox.
         public void seleccioncbx()
         {
             if (string.IsNullOrWhiteSpace(txtnombre.Text) || ltxservicios.Items.Contains(nombre))
             {
-                validarnombre()
                 nombrevacio();
             }
             else if (cbxseleccionar.SelectedItem == null)
@@ -121,8 +95,6 @@ namespace Laboratorio_2.git_hub
             {
                 agregarprecios();
             }
-            
-            
 
         }
         // def salir de todo.
@@ -130,54 +102,20 @@ namespace Laboratorio_2.git_hub
         {
             this.Close();
         }
-        private void btnsalir_Click(object sender, EventArgs e)
+        public void limpiar()
         {
-            salirdetodo();
+            txtnombre.Clear();
+            ltxservicios.Items.Clear();
+            lblresultado.Text = "Resultado: ";
+            lblresultado2.Text = "Resultado:";
+            lblresultado1.Text = "Resultado:";
+            cbxseleccionar.Text = "";
         }
 
         private void btncalculo_Click(object sender, EventArgs e)
         {
             CalcularTotal();
         }
-
-        public void CalcularTotal()
-        {
-            validarservicio();
-
-            int suma = 0;
-            foreach (var valores in valores)
-            {
-                suma += valores;
-                lblresultado.Text = $"{suma}";
-                int cantidadServicios = ltxservicios.Items.Count;
-                if (cantidadServicios > 3)
-                {
-                    suma -= 3000;
-                    lblresultado.Text = $"Total con descuento: {suma}";
-                }
-                else
-                {
-                    lblresultado.Text = $"Total sin descuento: {suma}";
-                }
-            }
-        }
-
-
-        public void btnlimpiar_Click(object sender, EventArgs e)
-        {
-            txtnombre.Clear();
-            ltxservicios.Items.Clear();
-            lblresultado.Text = "";
-            valores.Clear();
-        // def limpiar.
-        public void limpiar()
-        {
-            txtnombre.Clear();
-            ltxservicios.Items.Clear();
-            lblresultado.Text = "Resultado: ";
-        }
-
-
         public void CalcularTotal()
         {
             if (string.IsNullOrWhiteSpace(txtnombre.Text) || ltxservicios.Items.Contains(nombre))
@@ -186,11 +124,11 @@ namespace Laboratorio_2.git_hub
             }
             else if (cbxseleccionar.SelectedItem == null)
             {
-                validarservicio() ;
+                validarservicio();
             }
             else
             {
-                
+
                 suma = valores.Sum();
                 int candtidaddeservicios = ltxservicios.Items.Count;
                 lblresultado1.Text = "Total descuentos: ¢0";
@@ -209,27 +147,57 @@ namespace Laboratorio_2.git_hub
                     }
                 }
             }
-            
+
         }
 
         //Botones
-        private void btnnombre_Click(object sender, EventArgs e)
-        {
-            validarnombre();
-        }
-        private void btnagregar_Click(object sender, EventArgs e)
-        {
-            seleccioncbx();
-        }
-        private void btncalculo_Click(object sender, EventArgs e)
-        {
-            CalcularTotal();
-        }
         public void btnlimpiar_Click(object sender, EventArgs e)
         {
             limpiar();
         }
-        private void btnsalir_Click(object sender, EventArgs e)
+
+        private void btnsalir_Click_1(object sender, EventArgs e)
+
         {
             salirdetodo();
+        }
+
+        private void btncalculo_Click_1(object sender, EventArgs e)
+        {
+
+            CalcularTotal();
+        }
+
+        private void btnnombre_Click(object sender, EventArgs e)
+        {
+            validarnombre();
+        }
+
+        private void btnagregar_Click_1(object sender, EventArgs e)
+        {
+            seleccioncbx();
+        }
+        private void contextMenuStrip1_Opening(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            eliminarServicioToolStripMenuItem.Enabled = (ltxservicios.SelectedItem != null);
+        }
+        private void eliminarServicioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (ltxservicios.SelectedItem != null)
+            {
+                ltxservicios.Items.Remove(ltxservicios.SelectedItem);
+                lblresultado.Text = string.Empty;
+                lblresultado1.Text = string.Empty;
+                lblresultado2.Text = string.Empty;
+            }
+            else
+            {
+                lblresultado.Text=("Por favor selecciona un ítem para eliminar.");
+            }
+        }
+    }
 }
+
+
+
+
