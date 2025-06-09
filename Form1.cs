@@ -22,17 +22,22 @@ namespace Laboratorio_2.git_hub
         {
             if (string.IsNullOrWhiteSpace(txtnombre.Text))
             {
+ 
                 lblmensaje.Text = " Por favor, ingrese un nombre ";
                 lblmensaje.ForeColor = Color.Red;
+               
             }
-            else if (ltxservicios.Items.Contains(nombre)) ;
+            else if (ltxservicios.Items.Contains($"Clientes: {nombre}"))
+            {
+
+            }
         }
         // def validar nombre.
         public void validarnombre()
         {
             string nombre = txtnombre.Text;
 
-            if (string.IsNullOrWhiteSpace(txtnombre.Text) || ltxservicios.Items.Contains(nombre))
+            if (string.IsNullOrWhiteSpace(txtnombre.Text) || ltxservicios.Items.Contains($"Clientes:{nombre}"))
             {
                 nombrevacio();
             }
@@ -41,12 +46,13 @@ namespace Laboratorio_2.git_hub
                 lblmensaje.Text = " El nombre se ha guardado correctamente.";
                 lblmensaje.ForeColor = Color.Black;
                 ltxservicios.Items.Add($"Clientes: {nombre}");
+
             }
         }
         // def validar servicio.
         public void validarservicio()
         {
-            if (string.IsNullOrWhiteSpace(txtnombre.Text) || ltxservicios.Items.Contains(nombre))
+            if (string.IsNullOrWhiteSpace(txtnombre.Text) || ltxservicios.Items.Contains($"Clientes: {nombre}"))
             {
                 nombrevacio();
             }
@@ -83,7 +89,7 @@ namespace Laboratorio_2.git_hub
         // def selección de combobox.
         public void seleccioncbx()
         {
-            if (string.IsNullOrWhiteSpace(txtnombre.Text) || ltxservicios.Items.Contains(nombre))
+            if (string.IsNullOrWhiteSpace(txtnombre.Text) || ltxservicios.Items.Contains($"Clientes:{nombre}"))
             {
                 nombrevacio();
             }
@@ -118,7 +124,7 @@ namespace Laboratorio_2.git_hub
         }
         public void CalcularTotal()
         {
-            if (string.IsNullOrWhiteSpace(txtnombre.Text) || ltxservicios.Items.Contains(nombre))
+            if (string.IsNullOrWhiteSpace(txtnombre.Text) || ltxservicios.Items.Contains($"Clientes: {nombre}"))
             {
                 nombrevacio();
             }
@@ -134,7 +140,7 @@ namespace Laboratorio_2.git_hub
                 lblresultado1.Text = "Total descuentos: ¢0";
                 lblresultado2.Text = $"Total: ¢{suma}";
                 lblresultado.Text = $"Total con descuento aplicado: No hay descuentos. ";
-                if (candtidaddeservicios >= 3)
+                if (candtidaddeservicios >= 4)
                 {
                     suma -= 3000;
                     lblresultado1.Text = $"Total de descuentos: ¢{3000} ";
@@ -145,6 +151,8 @@ namespace Laboratorio_2.git_hub
                     {
                         lblmensaje.Text = " Total elevado, revise su selección . ";
                     }
+
+
                 }
             }
 
@@ -171,6 +179,7 @@ namespace Laboratorio_2.git_hub
         private void btnnombre_Click(object sender, EventArgs e)
         {
             validarnombre();
+
         }
 
         private void btnagregar_Click_1(object sender, EventArgs e)
@@ -183,20 +192,25 @@ namespace Laboratorio_2.git_hub
         }
         private void eliminarServicioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (ltxservicios.SelectedItem != null)
+            int index = ltxservicios.SelectedIndex;
+
+            if (index == -1)
             {
-                ltxservicios.Items.Remove(ltxservicios.SelectedItem);
-                lblresultado.Text = string.Empty;
-                lblresultado1.Text = string.Empty;
-                lblresultado2.Text = string.Empty;
+                lblresultado.Text = "Por favor selecciona un ítem para eliminar.";
+                return;
             }
-            else
+            if (index < valores.Count)
             {
-                lblresultado.Text=("Por favor selecciona un ítem para eliminar.");
+                valores.RemoveAt(index);
             }
+
+            ltxservicios.Items.RemoveAt(index);
+            lblresultado.Text = 
+            lblresultado2.Text = "";
         }
     }
 }
+
 
 
 

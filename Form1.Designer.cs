@@ -114,7 +114,7 @@
             lblresultado.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             lblresultado.Location = new Point(107, 497);
             lblresultado.Name = "lblresultado";
-            lblresultado.Size = new Size(708, 26);
+            lblresultado.Size = new Size(639, 26);
             lblresultado.TabIndex = 7;
             lblresultado.Text = "Total con descuento:";
             // 
@@ -214,7 +214,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(914, 600);
+            ClientSize = new Size(845, 600);
             Controls.Add(lblresultado2);
             Controls.Add(lblresultado1);
             Controls.Add(lblmuestra);
