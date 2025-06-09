@@ -43,6 +43,7 @@
             btncalculo = new Button();
             lblmuestra = new Label();
             lblresultado1 = new Label();
+            lblresultado2 = new Label();
             SuspendLayout();
             // 
             // lblnombre
@@ -111,7 +112,7 @@
             lblresultado.Name = "lblresultado";
             lblresultado.Size = new Size(620, 39);
             lblresultado.TabIndex = 7;
-            lblresultado.Text = "\r\nResultado:";
+            lblresultado.Text = "Total con descuento:";
             // 
             // btntotal
             // 
@@ -232,5 +233,6 @@
         private Button btncalculo;
         private Label lblmuestra;
         private Label lblresultado1;
+        private Label lblresultado2;
     }
 }

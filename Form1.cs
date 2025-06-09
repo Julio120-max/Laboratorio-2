@@ -11,24 +11,25 @@ namespace Laboratorio_2.git_hub
         int[] precios = { 5000, 10000, 8000, 4000, 6750 };
         List<int> valores = new List<int>();
         int suma = 0;
+
+
         int residuo = 3000;
         public Form1()
         {
             InitializeComponent();
         }
 
-        // def validar nombre 1.
+        // def validar nombre vacio.
         public void nombrevacio()
         {
             if (string.IsNullOrWhiteSpace(txtnombre.Text))
             {
-                lblmensaje.Text = " Por favor ingrese un nombre ";
+                lblmensaje.Text = " Por favor, ingrese un nombre ";
                 lblmensaje.ForeColor = Color.Red;
             }
             else if (ltxservicios.Items.Contains(nombre))
             {
-                lblmuestra.Text = (" Ya existe un nombre");
-                lblmuestra.ForeColor = Color.Black;
+                
             }
         }
         // def validar nombre.
@@ -42,9 +43,9 @@ namespace Laboratorio_2.git_hub
             }
             else
             {
-                lblmensaje.Text = " El nombre ha sido guardado correctamente.";
+                lblmensaje.Text = " El nombre se ha guardado correctamente.";
                 lblmensaje.ForeColor = Color.Black;
-                ltxservicios.Items.Add(nombre);
+                ltxservicios.Items.Add($"Clientes: {nombre}");
             }
         }
         // def validar servicio.
@@ -56,6 +57,16 @@ namespace Laboratorio_2.git_hub
             }
             else if (cbxseleccionar.SelectedItem == null)
                 nombrevacio();
+            } 
+            if (cbxseleccionar.SelectedItem == null)
+            {
+                lblmensaje.Text = (" Por favor, seleccione un servicio.");
+                lblmensaje.ForeColor = Color.Red;
+                return;
+            }
+            else
+            {
+                lblmensaje.Text = " El servicio se ha agregado correctamente.";
          if private void btnlimpiar_Click(object sender, EventArgs e)
        {
         lblmensaje.Text = (" Por favor selecciones un servicio.");
@@ -65,22 +76,34 @@ namespace Laboratorio_2.git_hub
     else
                 lblmensaje.Text = " El servicio ha sido agregado correctamente";
                 ltxservicios.Items.Add(cbxseleccionar.SelectedItem);
+      
+            }
                }
       }
 }
             
             
 
+        }
+            
+
 }
         // def agregar precios.
         public void agregarprecios()
         {
+            if (cbxseleccionar.SelectedIndex == -1)
+            {
+                validarservicio();
+                return;
+            }
+
             int lugar = cbxseleccionar.SelectedIndex;
             int valor = precios[lugar];
             valores.Add(precios[lugar]);
-            lblmensaje.Text = " El servicio se agrego correctamente ";
-            lblmensaje.ForeColor = Color.Black;
             ltxservicios.Items.Add($"{cbxseleccionar.SelectedItem} - ¢{valor}");
+            lblmensaje.Text = " El servicio se ha agregado correctamente.";
+            lblmensaje.ForeColor = Color.Black;
+            
         }
         // def selección de combobox.
         public void seleccioncbx()
@@ -97,6 +120,9 @@ namespace Laboratorio_2.git_hub
             else
             {
                 agregarprecios();
+            }
+            
+            
 
         }
         // def salir de todo.
@@ -148,7 +174,7 @@ namespace Laboratorio_2.git_hub
         {
             txtnombre.Clear();
             ltxservicios.Items.Clear();
-            lblresultado.Text = " Resultado: ";
+            lblresultado.Text = "Resultado: ";
         }
 
 
@@ -160,32 +186,30 @@ namespace Laboratorio_2.git_hub
             }
             else if (cbxseleccionar.SelectedItem == null)
             {
-                validarservicio();
+                validarservicio() ;
             }
             else
             {
                 
-                foreach (var valor in valores)
-                {
-                    suma += valor;
-                }
-
-                
+                suma = valores.Sum();
                 int candtidaddeservicios = ltxservicios.Items.Count;
-
-                lblresultado1.Text = $"Total descuentos: ¢{3000} : Sub total: ¢{suma} :";
-
-                if (candtidaddeservicios > 3)
+                lblresultado1.Text = "Total descuentos: ¢0";
+                lblresultado2.Text = $"Total: ¢{suma}";
+                lblresultado.Text = $"Total con descuento aplicado: No hay descuentos. ";
+                if (candtidaddeservicios >= 3)
                 {
                     suma -= 3000;
+                    lblresultado1.Text = $"Total de descuentos: ¢{3000} ";
                     lblmuestra.Text = " Se ha aplicado el descuento.";
-                    lblresultado.Text = $"\nTotal con descuento aplicado: ¢{suma}. ";
-                }
-                else if ( suma > 35000)
-                {
-                    lblmensaje.Text = "Total elevado revise su seleccion: ";
+                    lblresultado.Text = $"Total con descuento aplicados: ¢{suma}. ";
+
+                    if (suma > 35000)
+                    {
+                        lblmensaje.Text = " Total elevado, revise su selección . ";
+                    }
                 }
             }
+            
         }
 
         //Botones
