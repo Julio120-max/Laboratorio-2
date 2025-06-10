@@ -116,7 +116,7 @@ namespace Laboratorio_2.git_hub
                     valores.RemoveAt(indice);// Si el elemento selecionado tiene un precio lo elimina.
                 }
             }
-            else// Si no hay un elemento elegido entonces muestra el siguiente mensaje en color rojo.
+            else// Si no hay un elemento elegido entonces muestra el siguiente mensaje en color rojo .
             {
                 lblmensaje.Text = " Por favor selecione un servicio para poder eliminarlo.";
                 lblmensaje.ForeColor = Color.Red;
