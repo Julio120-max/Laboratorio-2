@@ -50,6 +50,7 @@
             cambiarColorDeFondoToolStripMenuItem = new ToolStripMenuItem();
             salirToolStripMenuItem = new ToolStripMenuItem();
             limpiarHistorialToolStripMenuItem = new ToolStripMenuItem();
+            lblhola = new Label();
             contextMenuStrip1.SuspendLayout();
             contextMenuStrip2.SuspendLayout();
             SuspendLayout();
@@ -121,7 +122,7 @@
             // eliminarServicioToolStripMenuItem
             // 
             eliminarServicioToolStripMenuItem.Name = "eliminarServicioToolStripMenuItem";
-            eliminarServicioToolStripMenuItem.Size = new Size(210, 24);
+            eliminarServicioToolStripMenuItem.Size = new Size(186, 24);
             eliminarServicioToolStripMenuItem.Text = "Eliminar servicio";
             eliminarServicioToolStripMenuItem.Click += eliminarServicioToolStripMenuItem_Click;
             // 
@@ -240,12 +241,22 @@
             limpiarHistorialToolStripMenuItem.Text = "Limpiar todo";
             limpiarHistorialToolStripMenuItem.Click += limpiarHistorialToolStripMenuItem_Click;
             // 
+            // lblhola
+            // 
+            lblhola.AutoSize = true;
+            lblhola.Location = new Point(114, 481);
+            lblhola.Name = "lblhola";
+            lblhola.Size = new Size(41, 20);
+            lblhola.TabIndex = 18;
+            lblhola.Text = "Hola";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(966, 550);
             ContextMenuStrip = contextMenuStrip2;
+            Controls.Add(lblhola);
             Controls.Add(lblresultado2);
             Controls.Add(lblresultado1);
             Controls.Add(lblmuestra);
@@ -292,5 +303,6 @@
         private ToolStripMenuItem cambiarColorDeFondoToolStripMenuItem;
         private ToolStripMenuItem salirToolStripMenuItem;
         private ToolStripMenuItem limpiarHistorialToolStripMenuItem;
+        private Label lblhola;
     }
 }
