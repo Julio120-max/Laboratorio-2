@@ -51,6 +51,7 @@
             salirToolStripMenuItem = new ToolStripMenuItem();
             limpiarHistorialToolStripMenuItem = new ToolStripMenuItem();
             lblhola = new Label();
+            btnconfirmar = new Button();
             contextMenuStrip1.SuspendLayout();
             contextMenuStrip2.SuspendLayout();
             SuspendLayout();
@@ -59,26 +60,27 @@
             // 
             lblnombre.AutoSize = true;
             lblnombre.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblnombre.Location = new Point(107, 59);
+            lblnombre.Location = new Point(94, 44);
             lblnombre.Name = "lblnombre";
-            lblnombre.Size = new Size(160, 23);
+            lblnombre.Size = new Size(127, 19);
             lblnombre.TabIndex = 0;
             lblnombre.Text = "Nombre del cliente:";
             // 
             // txtnombre
             // 
-            txtnombre.Location = new Point(354, 55);
+            txtnombre.Location = new Point(310, 41);
+            txtnombre.Margin = new Padding(3, 2, 3, 2);
             txtnombre.Name = "txtnombre";
-            txtnombre.Size = new Size(293, 27);
+            txtnombre.Size = new Size(257, 23);
             txtnombre.TabIndex = 1;
             // 
             // lblservicios
             // 
             lblservicios.AutoSize = true;
             lblservicios.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblservicios.Location = new Point(107, 123);
+            lblservicios.Location = new Point(94, 92);
             lblservicios.Name = "lblservicios";
-            lblservicios.Size = new Size(180, 23);
+            lblservicios.Size = new Size(143, 19);
             lblservicios.TabIndex = 2;
             lblservicios.Text = "Seleccioné un servicio:";
             // 
@@ -86,17 +88,19 @@
             // 
             cbxseleccionar.FormattingEnabled = true;
             cbxseleccionar.Items.AddRange(new object[] { "Instalaciones electricas", "Limpieza profunda", "Pintura y retoques estéticos", "Mantenimiento de jardines", "Controles preventivos de plagas" });
-            cbxseleccionar.Location = new Point(354, 117);
+            cbxseleccionar.Location = new Point(310, 88);
+            cbxseleccionar.Margin = new Padding(3, 2, 3, 2);
             cbxseleccionar.Name = "cbxseleccionar";
-            cbxseleccionar.Size = new Size(293, 28);
+            cbxseleccionar.Size = new Size(257, 23);
             cbxseleccionar.TabIndex = 3;
             cbxseleccionar.Text = "                          Servicios";
             // 
             // btnagregar
             // 
-            btnagregar.Location = new Point(664, 117);
+            btnagregar.Location = new Point(581, 88);
+            btnagregar.Margin = new Padding(3, 2, 3, 2);
             btnagregar.Name = "btnagregar";
-            btnagregar.Size = new Size(151, 28);
+            btnagregar.Size = new Size(132, 21);
             btnagregar.TabIndex = 4;
             btnagregar.Text = "Agregar servicio";
             btnagregar.UseVisualStyleBackColor = true;
@@ -106,9 +110,11 @@
             // 
             ltxservicios.ContextMenuStrip = contextMenuStrip1;
             ltxservicios.FormattingEnabled = true;
-            ltxservicios.Location = new Point(107, 175);
+            ltxservicios.ItemHeight = 15;
+            ltxservicios.Location = new Point(94, 131);
+            ltxservicios.Margin = new Padding(3, 2, 3, 2);
             ltxservicios.Name = "ltxservicios";
-            ltxservicios.Size = new Size(321, 184);
+            ltxservicios.Size = new Size(281, 139);
             ltxservicios.TabIndex = 5;
             // 
             // contextMenuStrip1
@@ -116,13 +122,13 @@
             contextMenuStrip1.ImageScalingSize = new Size(20, 20);
             contextMenuStrip1.Items.AddRange(new ToolStripItem[] { eliminarServicioToolStripMenuItem });
             contextMenuStrip1.Name = "contextMenuStrip1";
-            contextMenuStrip1.Size = new Size(187, 28);
+            contextMenuStrip1.Size = new Size(161, 26);
             contextMenuStrip1.Text = "Opciones";
             // 
             // eliminarServicioToolStripMenuItem
             // 
             eliminarServicioToolStripMenuItem.Name = "eliminarServicioToolStripMenuItem";
-            eliminarServicioToolStripMenuItem.Size = new Size(186, 24);
+            eliminarServicioToolStripMenuItem.Size = new Size(160, 22);
             eliminarServicioToolStripMenuItem.Text = "Eliminar servicio";
             eliminarServicioToolStripMenuItem.Click += eliminarServicioToolStripMenuItem_Click;
             // 
@@ -130,17 +136,18 @@
             // 
             lblresultado.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             lblresultado.AutoSize = true;
-            lblresultado.Location = new Point(107, 451);
+            lblresultado.Location = new Point(94, 338);
             lblresultado.Name = "lblresultado";
-            lblresultado.Size = new Size(145, 20);
+            lblresultado.Size = new Size(116, 15);
             lblresultado.TabIndex = 7;
             lblresultado.Text = "Total con descuento:";
             // 
             // btnlimpiar
             // 
-            btnlimpiar.Location = new Point(525, 509);
+            btnlimpiar.Location = new Point(459, 382);
+            btnlimpiar.Margin = new Padding(3, 2, 3, 2);
             btnlimpiar.Name = "btnlimpiar";
-            btnlimpiar.Size = new Size(94, 29);
+            btnlimpiar.Size = new Size(82, 22);
             btnlimpiar.TabIndex = 9;
             btnlimpiar.Text = "Limpiar";
             btnlimpiar.UseVisualStyleBackColor = true;
@@ -148,9 +155,10 @@
             // 
             // btnnombre
             // 
-            btnnombre.Location = new Point(664, 55);
+            btnnombre.Location = new Point(581, 41);
+            btnnombre.Margin = new Padding(3, 2, 3, 2);
             btnnombre.Name = "btnnombre";
-            btnnombre.Size = new Size(151, 27);
+            btnnombre.Size = new Size(132, 20);
             btnnombre.TabIndex = 10;
             btnnombre.Text = "Agregar nombre";
             btnnombre.UseVisualStyleBackColor = true;
@@ -159,16 +167,17 @@
             // lblmensaje
             // 
             lblmensaje.AutoSize = true;
-            lblmensaje.Location = new Point(451, 189);
+            lblmensaje.Location = new Point(395, 142);
             lblmensaje.Name = "lblmensaje";
-            lblmensaje.Size = new Size(0, 20);
+            lblmensaje.Size = new Size(0, 15);
             lblmensaje.TabIndex = 11;
             // 
             // btnsalir
             // 
-            btnsalir.Location = new Point(643, 509);
+            btnsalir.Location = new Point(563, 382);
+            btnsalir.Margin = new Padding(3, 2, 3, 2);
             btnsalir.Name = "btnsalir";
-            btnsalir.Size = new Size(107, 29);
+            btnsalir.Size = new Size(94, 22);
             btnsalir.TabIndex = 12;
             btnsalir.Text = "Salir";
             btnsalir.UseVisualStyleBackColor = true;
@@ -176,10 +185,9 @@
             // 
             // btncalculo
             // 
-            btncalculo.Location = new Point(525, 328);
-            btncalculo.Margin = new Padding(3, 4, 3, 4);
+            btncalculo.Location = new Point(459, 246);
             btncalculo.Name = "btncalculo";
-            btncalculo.Size = new Size(197, 31);
+            btncalculo.Size = new Size(172, 23);
             btncalculo.TabIndex = 13;
             btncalculo.Text = "Calcular total";
             btncalculo.UseVisualStyleBackColor = true;
@@ -188,18 +196,18 @@
             // lblmuestra
             // 
             lblmuestra.AutoSize = true;
-            lblmuestra.Location = new Point(451, 245);
+            lblmuestra.Location = new Point(395, 184);
             lblmuestra.Name = "lblmuestra";
-            lblmuestra.Size = new Size(0, 20);
+            lblmuestra.Size = new Size(0, 15);
             lblmuestra.TabIndex = 14;
             // 
             // lblresultado1
             // 
             lblresultado1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             lblresultado1.AutoSize = true;
-            lblresultado1.Location = new Point(107, 384);
+            lblresultado1.Location = new Point(94, 288);
             lblresultado1.Name = "lblresultado1";
-            lblresultado1.Size = new Size(117, 20);
+            lblresultado1.Size = new Size(93, 15);
             lblresultado1.TabIndex = 15;
             lblresultado1.Text = "Total descuento:";
             // 
@@ -207,9 +215,9 @@
             // 
             lblresultado2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             lblresultado2.AutoSize = true;
-            lblresultado2.Location = new Point(107, 419);
+            lblresultado2.Location = new Point(94, 314);
             lblresultado2.Name = "lblresultado2";
-            lblresultado2.Size = new Size(45, 20);
+            lblresultado2.Size = new Size(35, 15);
             lblresultado2.TabIndex = 17;
             lblresultado2.Text = "Total:";
             // 
@@ -218,44 +226,54 @@
             contextMenuStrip2.ImageScalingSize = new Size(20, 20);
             contextMenuStrip2.Items.AddRange(new ToolStripItem[] { cambiarColorDeFondoToolStripMenuItem, salirToolStripMenuItem, limpiarHistorialToolStripMenuItem });
             contextMenuStrip2.Name = "contextMenuStrip2";
-            contextMenuStrip2.Size = new Size(241, 76);
+            contextMenuStrip2.Size = new Size(204, 70);
             // 
             // cambiarColorDeFondoToolStripMenuItem
             // 
             cambiarColorDeFondoToolStripMenuItem.Name = "cambiarColorDeFondoToolStripMenuItem";
-            cambiarColorDeFondoToolStripMenuItem.Size = new Size(240, 24);
+            cambiarColorDeFondoToolStripMenuItem.Size = new Size(203, 22);
             cambiarColorDeFondoToolStripMenuItem.Text = "Cambiar color de fondo.";
             cambiarColorDeFondoToolStripMenuItem.Click += cambiarColorDeFondoToolStripMenuItem_Click;
             // 
             // salirToolStripMenuItem
             // 
             salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            salirToolStripMenuItem.Size = new Size(240, 24);
+            salirToolStripMenuItem.Size = new Size(203, 22);
             salirToolStripMenuItem.Text = "Salir";
             salirToolStripMenuItem.Click += salirToolStripMenuItem_Click;
             // 
             // limpiarHistorialToolStripMenuItem
             // 
             limpiarHistorialToolStripMenuItem.Name = "limpiarHistorialToolStripMenuItem";
-            limpiarHistorialToolStripMenuItem.Size = new Size(240, 24);
+            limpiarHistorialToolStripMenuItem.Size = new Size(203, 22);
             limpiarHistorialToolStripMenuItem.Text = "Limpiar todo";
             limpiarHistorialToolStripMenuItem.Click += limpiarHistorialToolStripMenuItem_Click;
             // 
             // lblhola
             // 
             lblhola.AutoSize = true;
-            lblhola.Location = new Point(114, 481);
+            lblhola.Location = new Point(100, 361);
             lblhola.Name = "lblhola";
-            lblhola.Size = new Size(41, 20);
+            lblhola.Size = new Size(32, 15);
             lblhola.TabIndex = 18;
             lblhola.Text = "Hola";
             // 
+            // btnconfirmar
+            // 
+            btnconfirmar.Location = new Point(486, 288);
+            btnconfirmar.Name = "btnconfirmar";
+            btnconfirmar.Size = new Size(115, 23);
+            btnconfirmar.TabIndex = 19;
+            btnconfirmar.Text = "Confirmar Compra";
+            btnconfirmar.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(966, 550);
+            ClientSize = new Size(845, 412);
             ContextMenuStrip = contextMenuStrip2;
+            Controls.Add(btnconfirmar);
             Controls.Add(lblhola);
             Controls.Add(lblresultado2);
             Controls.Add(lblresultado1);
@@ -272,6 +290,7 @@
             Controls.Add(lblservicios);
             Controls.Add(txtnombre);
             Controls.Add(lblnombre);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "Form1";
             Text = "Simulador de cotización de Servicios";
             contextMenuStrip1.ResumeLayout(false);
@@ -304,5 +323,6 @@
         private ToolStripMenuItem salirToolStripMenuItem;
         private ToolStripMenuItem limpiarHistorialToolStripMenuItem;
         private Label lblhola;
+        private Button btnconfirmar;
     }
 }
